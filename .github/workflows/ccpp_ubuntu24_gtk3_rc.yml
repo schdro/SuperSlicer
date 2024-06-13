@@ -26,8 +26,6 @@ jobs:
       run: git submodule update --init
     - name: change date in version
       run: sed -i "s/+UNKNOWN/_$(date '+%F')/" version.inc
-    - name: update clock
-      run: sudo hwclock -s
     - name: update apt
       run: sudo apt update
     - name: install gtk3 glew

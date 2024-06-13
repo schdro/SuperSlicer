@@ -24,8 +24,6 @@ jobs:
       run: git submodule update --init
     - name: change date in version
       run: sed -i "s/+UNKNOWN//" version.inc
-    - name: update clock
-      run: sudo hwclock -s
     - name: update apt
       run: sudo apt update
     - name: install gtk2 glew
