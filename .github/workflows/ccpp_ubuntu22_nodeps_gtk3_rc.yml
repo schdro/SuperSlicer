@@ -33,7 +33,7 @@ jobs:
     - name: install gtk3 glew
       run: sudo apt install libgtk-3-dev libglew-dev libudev-dev libdbus-1-dev gettext python3-numpy libopenvdb-dev libfuse2
     - name: install deps
-      run: sudo apt install libboost-{system,iostreams,filesystem,thread,log,locale,regex,date-time}-dev libcereal-dev libqhull-dev libglew-dev libopencsg-dev libtbb-dev libblosc-dev libopenexr-dev libopenvdb-dev libgmp-dev libmpfr-dev libcgal-dev libnlopt-cxx-dev openssl libcurl4-openssl-dev libwxgtk3.0-gtk3-dev libpng-dev zlib1g-dev libexpat1-dev libocct-ocaf-dev libocct-data-exchange-dev
+      run: sudo apt install libboost-{system,iostreams,filesystem,thread,log,locale,regex,date-time}-dev libcereal-dev libqhull-dev libglew-dev libopencsg-dev libtbb-dev libblosc-dev libopenexr-dev libopenvdb-dev libgmp-dev libmpfr-dev libcgal-dev libnlopt-cxx-dev openssl libcurl4-openssl-dev libwxgtk3.0-gtk3-dev libpng-dev zlib1g-dev libexpat1-dev libocct-ocaf-dev libocct-data-exchange-dev occt-misc
     - name: build slicer
       run: cmake -DOPENVDB_FIND_MODULE_PATH=/usr/lib64/cmake/OpenVDB -DSLIC3R_FHS=ON -DSLIC3R_GTK=3 -DSLIC3R_GUI=ON -DSLIC3R_PCH=OFF -DSLIC3R_STATIC=OFF -DSLIC3R_WX_STABLE=ON -Wno-dev && make
       #run: ./BuildLinux.sh -s
